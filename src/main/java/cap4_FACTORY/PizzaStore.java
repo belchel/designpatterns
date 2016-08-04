@@ -1,20 +1,14 @@
 package cap4_FACTORY;
 
 public abstract class PizzaStore {
-//	private PizzaFactory factory ;
-//	
-//	
-//	public PizzaStore(PizzaFactory factory){
-//		this.factory= factory;
-//	}
+
 	private String locale;
 	
 	public void orderPizza(String type){
 		Pizza pizza;
-//		 pizza = this.factory.createPizza(type);
 		pizza=createPizza(type);
+		pizza.prepare();
 		pizza.bake();
-		pizza.cut();
 		pizza.cut();
 		pizza.box();
 		
